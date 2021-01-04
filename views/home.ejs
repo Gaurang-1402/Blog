@@ -1,0 +1,22 @@
+<%- include("partials/header") -%>
+
+<h1>Home</h1>
+
+<p><%= startingContent %></p>
+
+
+<% addedContent.forEach(function(post) { %>
+  <h1> <%= post.title %></h1>
+<% let finalContent= post.content.slice(0, 100)%>
+
+<p><%= finalContent %>...</p><a href= "/posts/<%=post._id%>" >Read More</a>
+ <%})%>
+
+
+
+ <form style= "padding-top: 20px;" action="/compose" method="get">
+   <button  class= "btn btn-primary" type="submit" >Compose a new Blog</button>
+ </form>
+
+
+<%- include("partials/footer") -%>
