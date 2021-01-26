@@ -1,5 +1,5 @@
 //jshint esversion:6
-
+//https://mysterious-eyrie-76870.herokuapp.com/posts/5ffc3c989032aa00040b7262
 // To write a new blog post go to http://localhost:3000/compose
 
 const express = require("express");
@@ -98,6 +98,7 @@ app.get("/posts/:day", function(req, res) {
         let wantedTitle = post.title
         res.render("post", {
           expandedPostTitle: wantedTitle,
+          console.log(wantedContent)
           expandedPostContent: wantedContent
         })
       } else {
@@ -123,6 +124,6 @@ if (port == null || port == "") {
 
 
 
-app.listen(port, function() {
+app.listen(post, function() {
   console.log("Server started on port 3000");
 });
