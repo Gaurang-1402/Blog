@@ -1,6 +1,4 @@
-//jshint esversion:6
-//https://mysterious-eyrie-76870.herokuapp.com/posts/5ffc3c989032aa00040b7262
-// To write a new blog post go to http://localhost:3000/compose
+
 
 const express = require("express");
 const bodyParser = require("body-parser");
@@ -109,11 +107,6 @@ app.get("/posts/:day", function(req, res) {
 
   });
 
-  // posts.forEach(function(post) {
-  //   if (dash.lowerCase(post.titleContent) === postName) {
-
-
-  // })
 
 })
 
